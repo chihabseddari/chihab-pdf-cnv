@@ -59,8 +59,10 @@ export function createPostgresStore(databaseUrl: string): Store {
   if (!globalSql.qirtasSql) {
     globalSql.qirtasSql = postgres(databaseUrl, {
       max: 1,
+      prepare: false,
       ssl: /localhost|127\.0\.0\.1/.test(databaseUrl) ? false : "require",
       idle_timeout: 20,
+      connect_timeout: 30,
     });
   }
   const sql = globalSql.qirtasSql;
