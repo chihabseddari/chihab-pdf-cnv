@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Amiri, Fraunces, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Amiri, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Atmosphere } from "@/components/atmosphere";
 import "./globals.css";
 
@@ -7,13 +7,6 @@ const amiri = Amiri({
   weight: ["400", "700"],
   subsets: ["arabic", "latin"],
   variable: "--font-amiri",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  weight: ["500", "600"],
-  subsets: ["latin"],
-  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -35,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ar" dir="rtl" className={`${amiri.variable} ${fraunces.variable} ${plex.variable} h-full`}>
+    <html lang="ar" dir="rtl" className={`${amiri.variable} ${plex.variable} h-full`}>
       <body className="min-h-full font-sans antialiased">
         <Atmosphere />
         <div className="relative z-10 min-h-full">{children}</div>

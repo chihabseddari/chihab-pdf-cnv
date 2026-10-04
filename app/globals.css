@@ -3,7 +3,7 @@
 @theme inline {
   --font-sans: var(--font-plex), "IBM Plex Sans Arabic", sans-serif;
   --font-display: var(--font-amiri), Amiri, serif;
-  --font-brand: var(--font-fraunces), Fraunces, serif;
+  --font-brand: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --color-paper: #07111c;
   --color-ink: #e7eef8;
   --color-ink-soft: #93a4bb;
